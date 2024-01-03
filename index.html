@@ -12,18 +12,21 @@
 <body>
   <form action="">
     <div class="input-container">
-      <input required type="text" pattern="/\b[A-Za-zÀ-ú][A-Za-zÀ-ú]+,?\s[A-Za-zÀ-ú][A-Za-zÀ-ú]{2,19}\b/gi" name="name" id="name" class="input">
+      <input required type="text" name="name" placeholder="" id="name" class="input">
       <label for="name">Nome</label>
+      <span class="error-message">Inválido</span>
     </div>
 
     <div class="input-container">
-      <input required type="email" pattern="/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i" name="email" id="email" class="input">
+      <input required type="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" name="email" id="email" class="input">
       <label for="email">Email</label>
+      <span class="error-message">Inválido</span>
     </div>
 
     <div class="input-container">
       <input required type="text" name="job-title" id="job-title" class="input">
       <label for="email">Job Title</label>
+      <span class="error-message">Inválido</span>
     </div>
   </form>
 </body>
